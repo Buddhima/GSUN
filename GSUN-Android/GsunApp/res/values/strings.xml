@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, GsunAppActivity!</string>
+    <string name="app_name">GsunApp</string>
+    <string-array name="range_prompt">
+        <item >10</item>
+        <item >20</item>
+        <item >30</item>
+    </string-array>
+    <string name="menu_group">&lt;b&gt;</string>
+
+</resources>

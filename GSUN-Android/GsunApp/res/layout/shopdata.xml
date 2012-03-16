@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/shop_details">
+
+    <TextView
+        android:id="@+id/shop_data_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shop Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" android:paddingLeft="3dp"/>
+
+    <TextView
+        android:id="@+id/MapTextItem"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/gro_menu_background"
+        android:clickable="true"
+        android:paddingLeft="25px"
+        android:paddingTop="10px"
+        android:layout_marginBottom="2px"
+        android:text="Map"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="24px"
+        android:textStyle="normal" android:layout_marginLeft="15dp" android:layout_marginRight="15dp"/>
+    
+    <ExpandableListView
+        android:id="@+id/expandableListView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" >
+
+        <!-- Preview: listitem=@android:layout/simple_expandable_list_item_1 -->
+
+    </ExpandableListView>
+
+     
+    
+</LinearLayout>

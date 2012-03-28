@@ -37,5 +37,15 @@
              />
 
     </RelativeLayout>
+    
+    <Button
+        android:id="@+id/buttonUserGuide"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_alignLeft="@+id/buttonAddPlace"
+        android:layout_centerVertical="true"
+        android:alpha=".7"
+        android:background="#003300"
+        android:text="Help Me!" />
 
 </LinearLayout>

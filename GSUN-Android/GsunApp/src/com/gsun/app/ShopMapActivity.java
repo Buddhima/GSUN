@@ -21,6 +21,7 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.TextView;
 
 import com.google.android.maps.GeoPoint;
@@ -208,5 +209,32 @@ private class NWTask extends AsyncTask<Void, Void, Void>{
 	}
 
 }
+
+
+@Override
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+    // TODO Auto-generated method stub
+    if (event.getAction() == KeyEvent.ACTION_DOWN) {
+        switch (keyCode) {
+        case KeyEvent.KEYCODE_HOME:
+            finish();
+            return true;
+        }
+    }
+
+    return super.onKeyDown(keyCode, event);
+}
+
+/* (non-Javadoc)
+ * @see android.app.Activity#finish()
+ */
+
+@Override
+public void finish() {
+	// TODO Auto-generated method stub
+	super.finish();
+	System.exit(0);
+}
+
 
 }

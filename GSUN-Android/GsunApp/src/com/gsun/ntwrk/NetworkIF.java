@@ -40,7 +40,6 @@ public class NetworkIF {
 	int range;
 	
 	
-
 	/**
 	 * give out Entry
 	 * gets result list and suggestion list
@@ -71,7 +70,7 @@ public class NetworkIF {
 	
 	private class wsTask1 extends AsyncTask<Void, Void, Void>{
 
-		//ProgressDialog autosuggestProgress=new ProgressDialog(NetworkIF.this);
+	//	ProgressDialog autosuggestProgress=new ProgressDialog(SearchActivity.this);
 		
 		@Override
 		protected Void doInBackground(Void... params) {
@@ -242,7 +241,7 @@ public class NetworkIF {
 			        	suggestionList=new Gson().fromJson(response.toString(), type);
 			        	
 			        	for(int i=0;i<suggestionList.size();i++){
-			        		if(suggestionList.get(i).getLongitude().equalsIgnoreCase(suggestionList.get(i+1).getLongitude())&&
+			        		if(suggestionList.get(i).getShop_name().equalsIgnoreCase(suggestionList.get(i+1).getShop_name())&&
 			        				suggestionList.get(i).getLatitude().equalsIgnoreCase(suggestionList.get(i+1).getLatitude())){
 			        			suggestionList.remove(i+1);
 			        			

@@ -9,6 +9,7 @@ import com.gsun.ntwrk.NetworkIF;
 import com.gsun.objects.Entry;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
@@ -85,6 +86,36 @@ public class SearchActivity extends Activity {
 				String range=rangeSpinner.getSelectedItem().toString();
 				
 				searchEntry=new Entry(need, "", String.valueOf(longitude), String.valueOf(latitude));
+			/*	
+				Thread splashThread=new Thread(){
+
+					
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						ProgressDialog dialog=new ProgressDialog(SearchActivity.this);
+						dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+						dialog.setMax(100);
+						dialog.show();
+						
+						for(int i=0;i<20;i++){
+							dialog.incrementProgressBy(5);
+							
+							try {
+								Thread.sleep(88);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+						}
+						dialog.dismiss();
+					}
+					
+					
+				};
+				splashThread.start();
+				*/
+				
 				netwrkIf.sendEntry(searchEntry, Integer.parseInt(range));
 				
 				try {

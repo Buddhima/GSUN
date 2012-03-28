@@ -79,6 +79,7 @@ public class ShopDataActivity extends Activity {
 					// i.putExtra(android.content.Intent.EXTRA_SUBJECT,
 					// "hello");
 					// i.putExtra(android.content.Intent.EXTRA_TEXT, "FFF");
+					
 					i.setType("text/plain");
 					startActivity(Intent.createChooser(i, "Send email"));
 
@@ -127,11 +128,11 @@ public class ShopDataActivity extends Activity {
 		ArrayList submenuDetail = new ArrayList();
 		// submenuDetail.add("Shop name");submenuDetail.add("Shop Type");submenuDetail.add("Shop Address");
 		HashMap m1 = new HashMap();
-		m1.put("Sub Item_1", "Shop name " + selectedShop.getShop_name());
+		m1.put("Sub Item_1", "Shop name: " + selectedShop.getShop_name());
 		HashMap m2 = new HashMap();
-		m2.put("Sub Item_1", "Shop Type ");
+		m2.put("Sub Item_1", "Shop Type: "+selectedShop.getDiscription());
 		HashMap m3 = new HashMap();
-		m3.put("Sub Item_1", "Shop Address " + selectedShop.getAddress());
+		m3.put("Sub Item_1", "Shop Address: " + selectedShop.getAddress());
 
 		submenuDetail.add(m1);
 		submenuDetail.add(m2);
@@ -144,7 +145,7 @@ public class ShopDataActivity extends Activity {
 		HashMap m4 = new HashMap();
 		m4.put("Sub Item_1", "Telephone No: " + selectedShop.getTelephone_no());
 		HashMap m5 = new HashMap();
-		m5.put("Sub Item_1", "Email " + selectedShop.getEmail());
+		m5.put("Sub Item_1", "Email: " + selectedShop.getEmail());
 
 		submenuContact.add(m4);
 		submenuContact.add(m5);

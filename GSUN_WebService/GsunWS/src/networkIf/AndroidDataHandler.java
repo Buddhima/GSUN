@@ -16,17 +16,22 @@ public class AndroidDataHandler {
 	 * @param entry
 	 * @param range
 	 * @return
-	 * @throws Exception
+	 * 
 	 */
 	/*public List<Shop> giveResultList(Entry entry, int range) throws Exception{
 		EntryHandler eh=new EntryHandler();
 		return eh.prepareResultList(entry, range);
 	}*/
 	
-	public String giveResultList(String entryString, int range) throws Exception{
+	public String giveResultList(String entryString, int range) {
+		String resultString=null;
+		try{
 		EntryHandler eh=new EntryHandler();
 		Entry entry=new Gson().fromJson(entryString, Entry.class);
-		String resultString=new Gson().toJson(eh.prepareResultList(entry, range));
+		resultString=new Gson().toJson(eh.prepareResultList(entry, range));
+		}catch(Exception e){
+			
+		}
 		return resultString;
 	}
 
@@ -35,18 +40,21 @@ public class AndroidDataHandler {
 	 * @param entry
 	 * @param range
 	 * @return
-	 * @throws Exception
+	 * 
 	 */
 	/*public List<Shop> giveSuggestionList(Entry entry, int range) throws Exception{
 		EntryHandler eh=new EntryHandler();
 		return eh.prepareSuggestionList(entry, range);
 	}*/
      
-	public String giveSuggestionList(String entryString, int range) throws Exception{
+	public String giveSuggestionList(String entryString, int range) {
+		
+		String suggestionString=null;
+		try{
 		EntryHandler eh=new EntryHandler();
 		Entry entry=new Gson().fromJson(entryString, Entry.class);
-		String suggestionString=new Gson().toJson(eh.prepareSuggestionList(entry, range));
-		
+		suggestionString=new Gson().toJson(eh.prepareSuggestionList(entry, range));
+		}catch(Exception e){}
 		
 		
 		return suggestionString;

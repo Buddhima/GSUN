@@ -41,6 +41,17 @@ public class FirstSelectionActivity extends Activity {
              }
 		});
 		
+		Button guideButton=(Button) findViewById(R.id.buttonUserGuide);
+		
+		guideButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent myIntent = new Intent(v.getContext(), HelpActivity.class);
+                startActivity(myIntent);
+             }
+		});
+		
 		
 	}
 
